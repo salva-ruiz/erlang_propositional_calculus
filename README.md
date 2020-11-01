@@ -13,10 +13,26 @@
 ```
 F1 = fun(A, B) -> A and B end,
 propositional_calculus:truth_table(F1).
+Truth table of a function with 2 parameters:
+- [0,0] => 0
+- [0,1] => 0
+- [1,0] => 0
+- [1,1] => 1
+[ok,ok,ok,ok]
 ```
 
 2. Simule the *implies* operator for the `(A ∧ ¬B) ➞ C` function and prints its truth table:
 ```
 F2 = fun(A, B, C) -> propositional_calculus:implies(A and not B, C) end,
-F2 = propositional_calculus:truth_table(F2).
+propositional_calculus:truth_table(F2).
+Truth table of a function with 3 parameters:
+- [0,0,0] => 1
+- [0,0,1] => 1
+- [0,1,0] => 1
+- [0,1,1] => 1
+- [1,0,0] => 0
+- [1,0,1] => 1
+- [1,1,0] => 1
+- [1,1,1] => 1
+[ok,ok,ok,ok,ok,ok,ok,ok]
 ```
